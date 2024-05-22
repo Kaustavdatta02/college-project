@@ -14,11 +14,14 @@
         
         body {
             background-color: rgb(186, 221, 210);
+            background-image: url(https://centralpineneedle.files.wordpress.com/2015/12/7184997758_887b639a09_k.jpg);
+            background-size: cover;
+            background-position: center; 
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         
         nav div {
-            background-color: rgba(34, 3, 80, 0.769);
+            background-color: rgba(173, 62, 34, 0.769);
             color: aliceblue;
             display: flex;
             justify-content: space-between;
@@ -28,7 +31,7 @@
         }
         
         nav div h2 {
-            text-shadow: 0 0 10px rgb(0, 110, 255);
+            text-shadow: 0 0 10px wheat;
         }
         
         nav div h5 {
@@ -58,17 +61,35 @@
             text-align: center;
             padding: 15px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: rgb(0, 0, 87);
             margin:0 5%;
+            background-image: url(https://th.bing.com/th/id/OIP.BsoA6xJpgoXc7IINY3LGZQHaDo?w=325&h=172&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+            background-size: cover;
+             background-position: center;
+             -webkit-background-clip: text;
+             background-clip: text;
+             color: transparent;
+        }
+
+        body::-webkit-scrollbar{
+             background-color: transparent;
+        }
+
+        body::-webkit-scrollbar-thumb{
+            background: linear-gradient(orange,white,green);
+            border-radius: 20px;
         }
         
         form {
             border: 2px solid;
             border-radius: 5px;
-            background-color: rgba(148, 160, 255, 0.416);
             width: 100%;
             max-width: 700px;
+            color: white;
             padding: 20px;
+            background-image: url(https://th.bing.com/th/id/OIP.warbz5_GW7px8gwKj-7KwAHaEK?w=330&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 3%;
         }
         
         form div {
@@ -104,7 +125,7 @@
 .add-department-btn {
     padding: 10px;
     margin: 10px 0;
-    background-color: rgb(0, 212, 141);
+    background-color: purple;
     border: none;
     border-radius: 5px;
     color: rgb(6, 15, 87);
@@ -126,6 +147,7 @@
             font-size: 1.1em;
             font-family: Arial, Helvetica, sans-serif;
             padding: 0 2vw;
+            color: #fff;
             font-weight: 600;
             flex-wrap: wrap; /* Allow content to wrap to the next line */
         }
@@ -140,6 +162,7 @@
             background-color: rgb(216, 18, 18);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             cursor: pointer;
+            color: #111;
         }
         
         .dlt-btn:hover {
@@ -220,7 +243,7 @@ footer {
   <body>
     <nav>
       <div>
-        <h2>Welcome To Colpedia Admin Panel</h2>
+        <h2><u>Welcome To Colpedia Admin Panel</u></h2>
         <a href="/" style="text-decoration: none; color:whitesmoke"><h5>Log Out</h5></a>
       </div>
     </nav>
@@ -229,56 +252,56 @@ footer {
 
         <form id="collegeForm" action="/addCollege" method="post" enctype="multipart/form-data">
             <div>
-                <label for="college_name">College Name:</label>
-                <input type="text" required  name="college_name">
+                <label for="college_name">College Name :</label>
+                <input placeholder="Enter College Name" type="text" required  name="college_name">
             </div>
             
             <div>
-                <label for="university_name">University Name:</label>
-                <input type="text" required  name="university_name">
+                <label for="university_name">University Name :</label>
+                <input placeholder="Enter University Name" type="text" required  name="university_name">
             </div>
             
             <div>
-                <label for="college_type">College Type:</label>
-                <input type="text" required  name="college_type">
+                <label for="college_type">College Type :</label>
+                <input placeholder="Enter College Type" type="text" required  name="college_type">
             </div>
 
             <div>
-                <label for="district_name">District Name:</label>
-                <input type="text" required  name="district_name">
+                <label for="district_name">District Name :</label>
+                <input placeholder="Enter District Name" type="text" required  name="district_name">
             </div>
 
             <div>
-                <label for="state_name">State Name:</label>
-                <input type="text" required  name="state_name">
+                <label for="state_name">State Name :</label>
+                <input placeholder="Enter State Name" type="text" required  name="state_name">
             </div>
 
             <div>
-                <label for="admission_fees">Addmission Fees:</label>
-                <input type="text" required  name="admission_fees">
+                <label for="admission_fees">Addmission Fees :</label>
+                <input placeholder="Enter The Amount" type="text" required  name="admission_fees">
             </div>
 
             <div>
-                <label for="semester_fees">Semester Fees:</label>
-                <input type="text" required  name="semester_fees">
+                <label for="semester_fees">Semester Fees :</label>
+                <input placeholder="Enter The Amount" type="text" required  name="semester_fees">
             </div>
 
            <div id="depertment">
-                <label for="department">Department:</label>
-                <input type="text" name="department" class="department" oninput="this.value = this.value.toUpperCase()">
+                <label for="department">Department :</label>
+                <input placeholder="Enter Department" type="text" name="department" class="department" oninput="this.value = this.value.toUpperCase()">
            </div>
            <div style="justify-content:center; " >
-            <div class="add-department-btn" onclick="addDepertment()">ADD DEPERTMENT + </div>
+            <div class="add-department-btn" onclick="addDepertment()">ADD DEPERTMENT  </div>
         </div>
 
 
             <div>
-                <label for="photo">College Photo:</label>
+                <label for="photo">College Photo :</label>
                 <input type="file" required  name="photo">
             </div>
             
             <div>
-                <input type="submit"  value="Submit To Add College">
+                <input type="submit"  value="Submit">
             </div>
         </form>
     </div>
